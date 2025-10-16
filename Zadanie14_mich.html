@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let m_kow = parseInt(prompt("Podaj wartość m (naturalna > 0):", "4"));
+
+    if (m_kow > 0) {
+        let a = m_kow + 2;
+        let b = (m_kow + 1) * (m_kow + 2);
+        let c = m_kow * (m_kow + 1);
+        document.write("m = " + m_kow + "<br>")
+        document.write("1/" + m_kow + " = 1/" + a + " + 1/" + b + " + 1/" + c);
+    } else {
+        document.write("Błąd: m musi być większe od 0");
+    }
+</script>
+</body>
+</html>
