@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function Pole_Michalowski()
+    {
+        const a= parseFloat(document.getElementById('dlugosc').value);
+        let b= a*a;
+        document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b.toFixed(2)+" cm^2";
+    }
+    function Obwod_Michalowski()
+    {
+        const a= parseFloat(document.getElementById('dlugosc').value);
+        let b= 4*a;
+        document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b.toFixed(2)+" cm";
+    }
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="Pole_Michalowski" value="Oblicz pole" Onclick="Pole_Michalowski()"><br><br>
+<input type="button" name="Obwod_Michalowski" value="Oblicz obwod" Onclick="Obwod_Michalowski()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>
