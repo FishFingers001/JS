@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+programowanie obiektowe
+<script>
+    function ciezarowka(ladownosc_c,waga_c,rejestracja_c)//początek konstruktora
+    {
+        this.ladownosc=ladownosc_c;
+        this.waga=waga_c;
+        this.rejestracja=rejestracja_c;
+    }//koniec konstruktora
+    ciezarowka.prototype.wypisz = function () //definicja metody
+    {
+        alert(this.ladownosc + ' ' + this.waga+ ' ' + this.rejestracja);
+    };
+    const ciezarowka1 = new ciezarowka("2t", "3t", "DW98458A"); // nowy obiekt osoba1
+    const ciezarowka2 = new ciezarowka('500Kg', '1.5t', 'GD982A21');
+    ciezarowka1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
+    ciezarowka2.wypisz();
+    document.write("dostęp do właściwości"+"<br>");
+    // poniżej dostęp do pól osoby1
+    document.write("ciezarowka pierwsza"+" "+ciezarowka1.ladownosc+" "+ciezarowka1.waga+" "+ciezarowka1.rejestracja);
+</script>
+</body>
+</html></textarea>
+</body>
+</html>

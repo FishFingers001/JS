@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+1. W jaki sposób można określić właściwość danego obiektu (dwa sposoby wraz z przykładami)?
+
+    Notacja kropkowa (Dot notation): Najbardziej popularny i czytelny sposób, używany, gdy znamy nazwę właściwości w trakcie pisania kodu.
+    Przykład: auto.kolor = "czerwony";
+
+    Notacja nawiasowa (Bracket notation): Stosowana, gdy nazwa właściwości jest przechowywana w zmiennej lub zawiera znaki specjalne (np. spacje).
+    Przykład: auto["kolor"] = "czerwony"; lub let cecha = "model"; auto[cecha] = "F150";
+
+2. W jaki sposób można odwołać się do pól (właściwości) i metod?
+
+    Odwołanie do pola: obiekt.nazwaPola;
+    Odwołanie do metody: obiekt.nazwaMetody();
+
+3. Wymień cechy charakterystyczne konstruktora.
+
+    Automatyczne wywołanie: Konstruktor uruchamia się samoczynnie w momencie tworzenia nowego obiektu za pomocą operatora new.
+    Inicjalizacja stanu: Jego głównym zadaniem jest ustawienie początkowych wartości pól (właściwości) obiektu.
+    Nazewnictwo: Zgodnie z powszechną konwencją, nazwy konstruktorów zaczynamy wielką literą (PascalCase).
+    Użycie słowa this: Wewnątrz konstruktora słowo kluczowe this wskazuje na nowo tworzony obiekt.
+    Brak jawnego return: Konstruktor zazwyczaj nie zwraca żadnej wartości – automatycznie zwraca nowo utworzony obiekt.
+
+4. Konstruowanie obiektu na podstawie przykładu (trzy pola, jedna metoda).
+
+    Przykład obiektu "smartfon":
+    const smartfon = {
+        marka: "Samsung",        // Pole 1
+        model: "S23",           // Pole 2
+        czyWlaczony: true,      // Pole 3
+        zadzwon: function() {   // Metoda
+            console.log("Wybieram numer...");
+        }
+    };
+
+5. Znaczenie słowa this. Jak oddzielamy pola oraz metody?
+
+    Słowo kluczowe this: Działa jak wskaźnik na "bieżący obiekt". Pozwala metodzie odwołać się do danych znajdujących się w tym samym obiekcie.
+    Oddzielanie w literałach obiektowych: Poszczególne pola oraz metody oddzielamy od siebie przecinkami (,).
+    Oddzielanie wewnątrz konstruktora: W funkcjach konstrukcyjnych przypisania właściwości do this oddzielamy średnikami (;).
+
+6. Konstruktor w JS na podstawie przykładu wraz z opisem.
+
+    Przykład:
+    function Gracz(nick, poziom) {
+        this.nick = nick;
+        this.poziom = poziom;
+        this.awansuj = function() {
+            this.poziom++;
+        };
+    }
+    Opis: Funkcja Gracz pełni rolę schematu. Parametry "nick" i "poziom" są przekazywane podczas tworzenia obiektu i przypisywane do nowej instancji poprzez "this". Każdy stworzony gracz ma własne unikalne dane.
+
+7. Znaczenie słowa kluczowego New wraz z przykładem.
+
+    Znaczenie: Operator new wywołuje funkcję konstruktora. Tworzy on pusty obiekt, łączy go z prototypem i ustawia kontekst "this" na ten nowy obiekt, a na koniec go zwraca.
+    Przykład: let uzytkownik1 = new Gracz("Sniper99", 1);
+
+8. Znaczenie słowa kluczowego prototype wraz z przykładem i opisem.
+
+    Znaczenie: Właściwość prototype pozwala na dodawanie właściwości i metod do konstruktora, które będą współdzielone przez wszystkie instancje.
+    Przykład:
+    Gracz.prototype.wyloguj = function() {
+        console.log(this.nick + " wylogowany.");
+    };
+    Opis: Zamiast kopiować metodę "wyloguj" do każdego nowo utworzonego obiektu (co zajmuje pamięć), dodajemy ją do prototypu. Wszystkie obiekty typu Gracz będą miały do niej dostęp "przez referencję". Jest to mechanizm optymalizacji i podstawa dziedziczenia w JavaScript.
+</pre>
+</body>
+</html>
