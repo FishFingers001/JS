@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>Podaj pierwsza liczbe:</label>
+    <input type="number" id="liczba1"> <br>
+    <label>Podaj druga liczbe: </label>
+    <input type="number" id="liczba2"><br>
+    <input type="button" value="DODAWANIE" onclick="dodawanie()">
+    <input type="button" value="ODEJMOWANIE" onclick="odejmowanie()">
+    <input type="button" value="MNOŻENIE" onclick="mnozenie()">
+    <input type="button" value="DZIELENIE" onclick="dzielenie()">
+    <input type="button" value="teoria" onclick="teoria()"><br>
+    <span id="wynik"></span>
+    <script>
+        function teoria() {
+            document.write("<font color=green size=4>pierwsza linia teorii</font>"+"<br>");
+            document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>labelfor=</font>"+"<font color=red size=4>&quot;</font>");
+            document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>");
+            document.write("<font color=red size=4>Podaj pierwszą liczbę:</font>");
+            document.write("<font color=red size=4>&lt;</font>"+"<font color=redsize=4>/label</font>"+"<font color=red size=4>&gt;</font>");
+            document.write("<font color=red size=4>&lt;</font>"+"<font color=red size=4>inputtype=</font>"+"<font color=red size=4>&quot;</font>");
+            document.write("<font color=red size=4>number</font>"+"<font color=redsize=4>&quot;</font>");
+            document.write("<font color=red size=4> id=</font>"+"<font color=red size=4>&quot;</font>");
+            document.write("<font color=red size=4>a</font>"+"<font color=red size=4>&quot;</font>"+"<font color=red size=4>&gt;</font>"+"<br>");
+            document.write("<font color=green size=4>wytłumaczenia</font>"+"<br>");
+            document.write("<font color=red size=4>wykonanie numerycznego pola formularza z opisem 'Podaj pierwszą liczbę:' a nazwa pola to 'a' </font>"+"<br>");
+        }
+        function dodawanie() {
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+            if (a == "" || b == "")
+                document.getElementById("wynik").innerHTML = `podaj obie liczby`;
+            else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                document.getElementById("wynik").innerHTML = `wynik dzialania wynosi: ${(a + b).toFixed(2)}`;
+            }
+        }
+        function odejmowanie() {
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+            if (a == "" || b == "")
+                document.getElementById("wynik").innerHTML = `podaj obie liczby`;
+            else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                document.getElementById("wynik").innerHTML = `wynik dzialania wynosi: ${(a - b).toFixed(2)}`;
+            }
+        }
+        function mnozenie() {
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+            if (a == "" || b == "")
+                document.getElementById("wynik").innerHTML = `podaj obie liczby`;
+            else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                document.getElementById("wynik").innerHTML = `wynik dzialania wynosi: ${(a*b).toFixed(2)}`;
+            }
+        }
+        function dzielenie() {
+            let a = document.getElementById("liczba1").value;
+            let b = document.getElementById("liczba2").value;
+            if(a == 0 || b == 0)
+                document.getElementById("wynik").innerHTML = `nie mozna dzielic przez 0`;
+            else
+                if (a == "" || b == "")
+            document.getElementById("wynik").innerHTML = `podaj obie liczby`;
+                else {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                document.getElementById("wynik").innerHTML = `wynik dzialania wynosi: ${(a / b).toFixed(2)}`;
+                }        }
+    </script>
+</body>
+</html>

@@ -9,45 +9,20 @@
     {
         window.open(link,"okienko_zad","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
     }
+    function button(a) {
 
+        document.write(`<h1 style="text-align: center; color: red; font-weight: bold; font-style: italic">wykonał: Olivier Michałowski mój numer w dzienniku to 17, czyli mam układ [(26) mod 4-1] układ 1 </h1>  <hr/>  <h1><i><b> Zadania </b></i></h1>  <hr/>`);
+
+        for (let i = 1; i <= a; i++) {
+            document.write(`<input type="button" name="zadanie${i}" value="zadanie${i}" onclick="WinOpen_zad('Zadania/Zadanie${i}_mich.html')">`);
+        }
+    }
+
+    let b = 41
+    button(b);
     </script>
-    </head>
-    <body>
-        <h1 style="text-align: center; color: red; font-weight: bold; font-style: italic">wykonał: Olivier Michałowski mój numer w dzienniku to 17, czyli mam układ [(26) mod 4-1] układ 1 </h1>
-        <hr>
-    <h1><i><b> Zadania </b></i></h1>
-        <hr>
-
-        <input type="button" name="zadanie1" value="zadanie1" onclick="WinOpen_zad('Zadania/Zadanie1_mich.html')">
-        <input type="button" name="zadanie2" value="zadanie2" onclick="WinOpen_zad('Zadania/Zadanie2_mich.html')">
-        <input type="button" name="zadanie3" value="zadanie3" onclick="WinOpen_zad('Zadania/zadanie3/Zadanie3_mich.html')">
-        <input type="button" name="zadanie4" value="zadanie4" onclick="WinOpen_zad('Zadania/Zadanie4_mich.html')">
-        <input type="button" name="zadanie5" value="zadanie5" onclick="WinOpen_zad('Zadania/Zadanie5_mich.html')">
-        <input type="button" name="zadanie6" value="zadanie6" onclick="WinOpen_zad('Zadania/Zadanie6_mich.html')">
-        <input type="button" name="zadanie7" value="zadanie7" onclick="WinOpen_zad('Zadania/Zadanie7_mich.html')">
-        <input type="button" name="zadanie8" value="zadanie8" onclick="WinOpen_zad('Zadania/Zadanie8_mich.html')">
-        <input type="button" name="zadanie9" value="zadanie9" onclick="WinOpen_zad('Zadania/Zadanie9_mich.html')">
-        <input type="button" name="zadanie10" value="zadanie10" onclick="WinOpen_zad('Zadania/Zadanie10_mich.html')">
-        <input type="button" name="zadanie11" value="zadanie11" onclick="WinOpen_zad('Zadania/Zadanie11_mich.html')">
-        <input type="button" name="zadanie12" value="zadanie12" onclick="WinOpen_zad('Zadania/Zadanie12_mich.html')">
-        <input type="button" name="zadanie13" value="zadanie13" onclick="WinOpen_zad('Zadania/Zadanie13_mich.html')">
-        <input type="button" name="zadanie14" value="zadanie14" onclick="WinOpen_zad('Zadania/Zadanie14_mich.html')">
-        <input type="button" name="zadanie15" value="zadanie15" onclick="WinOpen_zad('Zadania/Zadanie15_mich.html')">
-        <input type="button" name="zadanie16" value="zadanie16" onclick="WinOpen_zad('Zadania/Zadanie16_mich.html')">
-        <input type="button" name="zadanie18" value="zadanie18" onclick="WinOpen_zad('Zadania/Zadanie18_mich.html')">
-        <input type="button" name="zadanie19" value="zadanie19" onclick="WinOpen_zad('Zadania/Zadanie19_mich.html')">
-        <input type="button" name="zadanie20" value="zadanie20" onclick="WinOpen_zad('Zadania/Zadanie20_mich.html')">
-        <input type="button" name="zadanie21" value="zadanie21" onclick="WinOpen_zad('Zadania/Zadanie21_mich.html')">
-        <input type="button" name="zadanie22" value="zadanie22" onclick="WinOpen_zad('Zadania/Zadanie22_mich.html')">
-        <input type="button" name="zadanie23" value="zadanie23" onclick="WinOpen_zad('Zadania/Zadanie23_mich.html')">
-        <input type="button" name="zadanie24" value="zadanie24" onclick="WinOpen_zad('Zadania/Zadanie24_mich.html')">
-        <input type="button" name="zadanie28" value="zadanie28" onclick="WinOpen_zad('Zadania/Zadanie28_mich.html')">
-        <input type="button" name="zadanie29" value="zadanie29" onclick="WinOpen_zad('Zadania/Zadanie29_mich.html')">
-        <input type="button" name="zadanie30" value="zadanie30" onclick="WinOpen_zad('Zadania/Zadanie30_mich.html')">
-        <input type="button" name="zadanie31" value="zadanie31" onclick="WinOpen_zad('Zadania/Zadanie31_mich.html')">
-        <input type="button" name="zadanie32" value="zadanie32" onclick="WinOpen_zad('Zadania/Zadanie32_mich.html')">
-
-        <hr>
+</head>
+<body>
     <h2><i><b> Kody </b></i></h2>
         <hr>
 
@@ -69,6 +44,6 @@
         <input type="button" name="zadanie32_kod" value="zadanie32-kod" onclick="WinOpen_zad('KODY/Zadanie32_kod.html')">
 
         <hr>
-</body>
+    </body>
 </html>
 <!-- Wzór strony index oraz jej zawartość Autorstwa Oliviera Michałowskiego wszystkie inne wersje są kopiami -->
