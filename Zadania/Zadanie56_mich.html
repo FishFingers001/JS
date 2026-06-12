@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>  Przykład użycia pętli </title>
+  <script language="JavaScript">
+    let liczba1=prompt("a=","");
+    let liczba2=prompt("B=","");
+
+    let a_mic=(liczba1.length%4)+5;
+    let b_mic=(liczba2.length%6)+20;
+    for ( let i_mic=0; i_mic<=b_mic; i_mic++)
+    {
+      document.write("*");
+    }
+    document.write("<br>");
+    for(let j_mic=0 ; j_mic<=a_mic-2 ; j_mic++)
+    {
+      let spacje_mic = new Array(b_mic).join("&nbsp;&nbsp;");
+      document.write("*"+spacje_mic+"*<br>");
+    }
+    for ( let i_mic=0; i_mic<=b_mic; i_mic++)
+    {
+      document.write("*");
+    }
+
+  </script>
+</head>
+<body>
+</body>
+</html>
+</body>
+</html>

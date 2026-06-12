@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a_mich = parseInt(prompt("ile razy powtorzyc"));
+    let tekst = prompt("podaj inicjaly");
+    for(let i = 1; i <= a_mich; i++) {
+        for(let k = 1; k <= i; k++) {
+            document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+        }
+        document.write(`${i}_${tekst}_${i}<br>`);
+    }
+</script>
+</body>
+</html>

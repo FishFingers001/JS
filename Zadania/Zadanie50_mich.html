@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function suma() {
+    let suma_mich = 0;
+    for (let i = 1; i < 1000000; i++) {
+      suma_mich = suma_mich + 1 / i;
+    }
+    document.write(`suma = ${suma_mich.toFixed(2)}`);
+  }
+  suma();
+</script>
+</body>
+</html>
